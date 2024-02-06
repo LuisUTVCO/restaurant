@@ -1,5 +1,7 @@
 <?php
 
+use Database\Seeders\FullSeeder;
+use Database\Seeders\UserSeeder;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -11,7 +13,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call(TransactionRoomSeeder::class);
-        			
+        $this->call(FullSeeder::class);
+        //$this->call(TransactionRoomSeeder::class);
+        $this->call(UserSeeder::class);        			
     }
 }
